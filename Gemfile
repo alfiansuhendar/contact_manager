@@ -44,6 +44,12 @@ gem "bootsnap", require: false
 
 gem 'faker', '~> 3.0'
 
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+
+gem 'jquery-rails'
+
+gem 'turbolinks'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
