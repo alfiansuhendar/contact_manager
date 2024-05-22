@@ -9,20 +9,16 @@ class ContactsController < ApplicationController
   end
 
   def new
-    Rails.logger.info "\n\n===## masuk new  ##===\n\n"
-
     @contact = Contact.new
   end
 
   def create
-    Rails.logger.info "\n\n===## masuk create  ##===\n\n"
     @contact = Contact.new(contact_params)
     if @contact.save
-      flash[:success] = "Contact was successfully created."
-      redirect_to contacts_path
+        flash[:success] = "Contact was successfully created."
+        redirect_to contacts_path
     else
-      Rails.logger.info "\n\n===## gagal create  ##===\n\n"
-      render 'new'
+        render 'new'
     end
   end
 
