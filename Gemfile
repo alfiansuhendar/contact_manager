@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.4"
 gem "sprockets-rails"
 
 # Use mysql as the database for Active Record
-gem "mysql2", "~> 0.5"
+gem "mysql2", "~> 0.5.6"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -45,6 +45,8 @@ gem "bootsnap", require: false
 gem 'faker', '~> 3.0'
 
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+
+gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
 gem 'jquery-rails'
 

@@ -17,7 +17,7 @@ group_ids << Group.create(name: "Family").id
 p "#{group_ids.count} group created"
 
 group_count = group_ids.length
-number_of_contacts = 20
+number_of_contacts = 100
 contacts = []
 
 number_of_contacts.times do |i|
