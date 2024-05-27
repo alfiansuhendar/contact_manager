@@ -3,7 +3,7 @@
     <div class="media">
       <div class="media-left">
         <a href="#">
-          <%= image_tag contact.gravatar, class: "media-object"%>
+          <%= contact.avatar.present? ? image_tag("/system/contacts/avatars/000/000/121/thumb/#{contact.avatar_file_name}", class: "media-object") : image_tag(contact.gravatar, class: "media-object") %>
         </a>
       </div>
       <div class="media-body">

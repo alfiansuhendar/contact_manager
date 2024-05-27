@@ -48,6 +48,8 @@ gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
+gem 'paperclip', '~> 6.1'
+
 gem 'jquery-rails'
 
 gem 'turbolinks'

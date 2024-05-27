@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_21_081815) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_27_071254) do
   create_table "contacts", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "company"
@@ -20,6 +20,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_21_081815) do
     t.bigint "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.index ["group_id"], name: "index_contacts_on_group_id"
   end
 
