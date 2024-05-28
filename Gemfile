@@ -50,6 +50,8 @@ gem 'kaminari', '~> 1.2', '>= 1.2.2'
 
 gem 'paperclip', '~> 6.1'
 
+gem 'jasny-bootstrap-rails', '~> 3.1', '>= 3.1.3'
+
 gem 'jquery-rails'
 
 gem 'turbolinks'

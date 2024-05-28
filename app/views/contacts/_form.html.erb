@@ -82,7 +82,7 @@
         <div class="col-md-4">
           <div class="fileinput fileinput-new" data-provides="fileinput">
             <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
-              <img src="http://placehold.it/150x150" alt="Photo">
+              <%= image_tag "/system/contacts/avatars/#{@contact.id.to_s.rjust(9, '0').scan(/.{3}/).join('/')}/medium/#{@contact.avatar_file_name}", style: "width:150px; height:150px" %>
             </div>
             <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
             <div class="text-center">
