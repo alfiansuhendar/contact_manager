@@ -82,9 +82,13 @@
         <div class="col-md-4">
           <div class="fileinput fileinput-new" data-provides="fileinput">
             <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
-              <%= image_tag "/system/contacts/avatars/#{@contact.id.to_s.rjust(9, '0').scan(/.{3}/).join('/')}/medium/#{@contact.avatar_file_name}", style: "width:150px; height:150px" %>
+              <% if @contact.avatar_file_name.present? %> 
+                <%= image_tag "/system/contacts/avatars/#{@contact.id.to_s.rjust(9, '0').scan(/.{3}/).join('/')}/medium/#{@contact.avatar_file_name}", style: "width:150px; height:150px" %>
+              <% else %>
+                <%= image_tag "/system/contacts/avatars/000/000/121/medium/default.png" %>
+              <% end %>
             </div>
-            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+            <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 150px; max-height: 150px;"></div>
             <div class="text-center">
               <span class="btn btn-default btn-file"><span class="fileinput-new">Choose Photo</span><span class="fileinput-exists">Change</span><%= f.file_field :avatar %></span>
               <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
